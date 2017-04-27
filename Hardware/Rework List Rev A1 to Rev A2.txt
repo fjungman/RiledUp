@@ -1,0 +1,4 @@
+Three pin battery connector - Swap pins 1 & 3
+Remove level-shifters from DC & DD pins
+connect RST to GP49 & remove from other connections
+put 3k resistors on DC and DD connected to +3.3v
