@@ -1,0 +1,88 @@
+//ST7735S_GP0.9 20130228
+//--------------------------------End ST7735S Reset Sequence --------------------//
+WriteComm(0x11); //Sleep out
+Delay(120); //Delay 120ms
+
+//------------------------------------ST7735S Frame Rate--------------------//
+WriteComm(0xB1);
+WriteData(0x05);
+WriteData(0x3C);
+WriteData(0x3C);
+WriteComm(0xB2);
+WriteData(0x05);
+WriteData(0x3C);
+WriteData(0x3C);
+WriteComm(0xB3);
+WriteData(0x05);
+WriteData(0x3C);
+WriteData(0x3C);
+WriteData(0x05);
+WriteData(0x3C);
+WriteData(0x3C);
+//------------------------------------End ST7735S Frame Rate-------------------//
+WriteComm(0xB4); //Dot inversion
+WriteData(0x03);
+//------------------------------------ST7735S Power Sequence--------------------//
+WriteComm(0xC0);
+WriteData(0x28);
+WriteData(0x08);
+WriteData(0x04);
+WriteComm(0xC1);
+WriteData(0XC0);
+WriteComm(0xC2);
+WriteData(0x0D);
+WriteData(0x00);
+WriteComm(0xC3);
+WriteData(0x8D);
+WriteData(0x2A);
+WriteComm(0xC4);
+WriteData(0x8D);
+WriteData(0xEE);
+//---------------------------------End ST7735S Power Sequence-------------------//
+WriteComm(0xC5); //VCOM
+WriteData(0x13);
+WriteComm(0x36); //MX, MY, RGB mode
+WriteData(0xc0);
+
+//------------------------------------ST7735S Gamma Sequence--------------------//
+WriteComm(0xE0);
+WriteData(0x04);
+WriteData(0x22);
+WriteData(0x07);
+WriteData(0x0A);
+WriteData(0x2E);
+WriteData(0x30);
+WriteData(0x25);
+WriteData(0x2A);
+WriteData(0x28);
+WriteData(0x26);
+WriteData(0x2E);
+WriteData(0x3A);
+WriteData(0x00);
+WriteData(0x01);
+WriteData(0x03);
+WriteData(0x13);
+WriteComm(0xE1);
+WriteData(0x04);
+WriteData(0x16);
+WriteData(0x06);
+WriteData(0x0D);
+WriteData(0x2D);
+WriteData(0x26);
+WriteData(0x23);
+WriteData(0x27);
+WriteData(0x27);
+WriteData(0x25);
+WriteData(0x2D);
+WriteData(0x3B);
+WriteData(0x00);
+WriteData(0x01);
+WriteData(0x04);
+WriteData(0x13);
+//------------------------------------End ST7735S Gamma Sequence----------------//
+WriteComm(0x3A); //65k mode
+WriteData(0x05);
+WriteComm(0x29); //Display on
+
+
+WriteComm(0x2c);
