@@ -1,0 +1,79 @@
+WriteComm(0x36);
+WriteData(0x08); 
+
+WriteComm(0x3a); //Set Color Format 
+WriteData(0x55); 
+
+WriteComm(0x2A); //Set Column Address
+WriteData(0x00);
+WriteData(0x18);
+WriteData(0x00);
+WriteData(0x67);
+
+WriteComm(0x2B); //Set Page Address
+WriteData(0x00);
+WriteData(0x00);
+WriteData(0x00);
+WriteData(0x9F);
+
+WriteComm(0xB1);//Set Frame Rate
+WriteData(0x0A);
+WriteData(0x05);
+
+WriteComm(0xC0); //Set VRH1[4:0] & VC[2:0] for VCI1 & GVDD
+WriteData(0x08);
+WriteData(0x00);
+
+WriteComm(0xC1); //Set BT[2:0] for AVDD & VCL & VGH & VGL
+WriteData(0x03);
+
+WriteComm(0xC2);
+WriteData(0x05);
+
+WriteComm(0xC5); //Set VMH[6:0] & VML[6:0] for VOMH & VCOML
+WriteData(0x43);
+WriteData(0x43);
+
+WriteComm(0xEC); //Set pumping clock frequence
+WriteData(0x0C);
+
+WriteComm(0xf2); //Enable Gamma bit
+WriteData(0x01);
+
+WriteComm(0xE0);
+WriteData(0x3B);//p1
+WriteData(0x2B);//p2
+WriteData(0x2A);//p3
+WriteData(0x2D);//p4
+WriteData(0x28);//p5
+WriteData(0x0C);//p6
+WriteData(0x57);//p7
+WriteData(0xF0);//p8
+WriteData(0x41);//p9
+WriteData(0x12);//p10
+WriteData(0x15);//p11
+WriteData(0x12);//p12
+WriteData(0x11);//p13
+WriteData(0x10);//p14
+WriteData(0x04);//p15
+
+WriteComm(0xE1);
+WriteData(0x04);//p1
+WriteData(0x14);//p2
+WriteData(0x15);//p3
+WriteData(0x12);//p4
+WriteData(0x17);//p5
+WriteData(0x13);//p6
+WriteData(0x28);//p7
+WriteData(0x60);//p8
+WriteData(0x3E);//p9
+WriteData(0x0D);//p10
+WriteData(0x2A);//p11
+WriteData(0x2D);//p12
+WriteData(0x2E);//p13
+WriteData(0x2F);//p14
+WriteData(0x3B);//p15
+
+WriteComm(0x11); //Exit Sleep
+Delay(120);
+WriteComm(0x29); // Display On	
